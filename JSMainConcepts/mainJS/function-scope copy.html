@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Function Scope Example</title>
+</head>
+<body>
+    <script>
+        let x = 1; //global scope (outside the function)
+        function a() {
+          let y = 2;
+          output(y + x);
+        }
+        function b() {
+          let z = 3;
+          output(z + x);
+        }
+        function output(value) {
+          let para = document.createElement('p');
+          document.body.appendChild(para);
+          para.textContent = 'Value: ' + value;
+        }
+
+
+        function myBigFunction() {
+          let myValue = 1;
+
+          subFunction1(myValue);
+          subFunction2(myValue);
+          subFunction3(myValue);
+        }
+        
+        function subFunction1() {
+          console.log("");
+        }
+        function subFunction2() {
+          console.log("");
+        }
+        function subFunction3() {
+          console.log("");
+        }
+
+
+
+
+        //local variable 
+        function showMessage(name) {
+          let message = ("Hi everyone! My name is " + name);
+          console.log(message);
+        }
+        showMessage("Zamir");
+        showMessage();
+      //alert(message); // local variable - will show error
+        
+
+        //outer variables (global)
+        let userName = "Zamir"; //outer (outside the function - global) variable 
+        function showMessageTwo() {
+          let message = "Hello, " + userName;
+          console.log(message);
+        }
+        showMessageTwo();
+
+        //functions have full access to outer variables, can modify it
+        let uN = "Zam";
+        function messageShow() {
+          uN = "Zain"; //changed the outer variable
+          let message = "Hello, " + uN;
+          console.log(message);
+        }
+        console.log(uN);
+        messageShow();
+        console.log(uN);
+
+
+
+
+
+        //PARAMETERS in functions
+        function learningParameters(from, text) { //arugments(parameters): from, text
+          console.log(from + ": " + text);
+        }
+        learningParameters("Ann", "Hello!"); // Ann: Hello! (*)
+        learningParameters("Ann", "What's up?"); // Ann: What's up? (**)
+
+
+
+
+
+        //Parameters Two!
+        function favoriteAnimal(pet) {
+          console.log("There is " + x + " " + pet + " in my living room!");
+        }
+        favoriteAnimal("Kai"); //when calling the function, the parameter is whatever you put in, the parameter when creating the function is just a placeholder(could be named anything)
+
+
+
+
+
+        //Parameters Three
+        function parametersThree(from, text) {
+          from = "*" + from + "*"; // make "from" look nicer
+          console.log(from + ": " + text);
+        }
+        let from = "Ann";
+        parametersThree(from, "Hello"); //*Ann*: Hello
+        // the value of "from" is the same, the function modified a local copy 
+        console.log( from ); // Ann 
+
+
+
+
+
+        //Default Values - "undefined"
+
+        function defaultValue (from, text = "no text given") {
+          console.log(from + ": " + text);
+        }
+        defaultValue("Zamir"); //when not given a parameter, "no text given" will show up (default value (otherwise undefined))
+        defaultValue("Zamir", "Kai"); // will use text "Kai" as parameter 
+
+
+
+
+
+        //Returning a value
+        function sum(a, b) {
+          return a + b;
+        }
+        let result = sum(1, 2); //"result" is global variable now
+        console.log(result);
+
+
+
+
+
+
+
+        //RETURN EXAMPLE
+
+        //food prices 
+        let beer_cost = 6.25;
+        let burger_cost = 4.75;
+        let pop_cost = 3.00;
+
+        //user's money
+        let account_balance = 15.75;
+        //check account balance
+        function checkBalance(amt) {
+          if (account_balance - amt >= 0) {
+                return "You have enough in your account!";
+                return true;
+          } else {
+                return "INSUFFICIENT FUNDS";
+                return false;
+          }
+        }
+
+        //drink beer
+        function drink_beer() {
+          if (checkBalance(beer_cost /* "amt parameter" */)) {
+            account_balance = account_balance - beer_cost;
+            console.log("Enjoy your beer!");
+          }
+          console.log("\tBalance: ", account_balance.toFixed(2));
+        }
+        //eat burger
+        function eat_burger() {
+          account_balance = account_balance - burger_cost;
+          console.log(account_balance);
+        }
+        //drink pop
+        function drink_pop() {
+          account_balance = account_balance - pop_cost;
+          console.log(account_balance);
+        }
+        //visit the carnival, eat, and drink
+        function visitCarnival(mList) {
+          for (let i=0, num = mList.length; i <num; i++) {
+            mList[i]();
+          }
+        }
+      visitCarnival([drink_beer]);
+      </script>
+</body>
+</html>

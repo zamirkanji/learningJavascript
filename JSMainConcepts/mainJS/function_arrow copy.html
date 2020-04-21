@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  // ARROW FUNCTIONS 
+    // In replace of function expressions
+    // let func = (arg1, arg2, arg3) => expression
+    // same as: let func = function(arg1, arg2) {
+    // return expression;
+    // }
+      let sumThree = (a, b) => a + b;
+      console.log(sumThree(6, 9));
+    // only one argument 
+      let double = n => n * 2;
+      console.log(double(3));   
+    // no argument (parentheses should be empty)
+      let sayHey = () => console.log("Hey");
+      sayHey();
+    // can be used similar to function expressions 
+      let age = prompt("What is your age?");
+      let welcome = (age < 18) ?
+        () => console.log("Hello") : //under 18
+        () => console.log("Greetings!"); //over 18
+      welcome();
+    // multiline arrow functions 
+      let sumn = (a, b) => { //curly braces opens a multiline function
+          let result = a + b;
+          return result; //when using curly, use return to get result
+      };
+      console.log(sumn(1, 5));
+    
+    
+    </script>
+  
+</body>
+</html>

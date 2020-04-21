@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <script src="loops.js"></script> -->
+  <title>Iteration</title>
+  
+</head>
+<body>   
+  <h2>Loops:</h2>
+  <img src="loop_js-02-farm.png">
+  <!-- <ul>
+      <li>Counter: Initialized with a certain value - this is the starting point of the loop ("Start: I have no food")</li>
+      <br>
+      <li>Exit Condition: Which is the criteria which the loop stops - usually the counter reaching a certain value. Illustrated by "Have I got enough food?" in the example. Let's say he needs 10 portions of food to feed his family. </li>
+      <br>
+      <li>Iterator: Generally increments the counter by a samll amount on each successive loop, until it reaches the exit condition. In the exmample, we could think the farmer is able to collect 2 portions of food per hours. After each hour, the amount of food he has collected is incremented by two, and he checks whether he has enough food. If he reached 10 portions (the exit condition), he can stop collecting and go home.</li>
+    
+    <p>In pseudocode, this would look something like the following: </p>
+
+    <p>
+      loop(food = 0; foodNeeded = 10) {
+        <br>
+        if (food >= foodNeeded) {
+          <br>
+          exit loop;
+          <br>
+          // We have enough food; let's go home
+          <br>
+        } else {
+          <br>
+          food += 2; // Spend an hour collecting 2 more 
+          food
+          <br>
+          // loop will then run again
+          <br>
+        }
+        <br>
+      }
+    </p>
+    <br>
+    <li>So the amount of food needed is set at 10, and the amount the farmer currently has is set at 0. In each iteration of the loop, we check whether the amount of food the farmer has is larger or equal to the amount he needs. If so, we can exit the loop. If not, the farmer spends an hour collecting two portions of food, and the loop runs again.</li>
+  </ul>
+  </div> -->
+  <ul>
+  <h3>For Loop: </h3>
+    <li>An initializer — this is usually a variable set to a number, which is incremented to count the number of times the loop has run. It is also sometimes referred to as a <strong>counter variable</strong></li>
+    <li>An exit-condition — as mentioned before, this defines when the loop should stop looping. This is generally an expression featuring a comparison operator, a test to see if the exit condition has been met</li>
+    <li>A final-expression — this is always evaluated (or run) each time the loop has gone through a full iteration. It usually serves to increment (or in some cases decrement) the counter variable, to bring it closer to the exit condition value.</li>
+  </ul>
+
+  <br>
+
+    <label for="search">Search by contact name: </label>
+    <input id="search" type="text">
+    <button>Search</button>
+
+    <p></p>
+  <br>
+
+  <h5></h5>
+  <script>
+    //FOR LOOPS
+  // const contacts = ["Chris:2232322", "Sarah:3453456", "Bill:7654322", "Mary:9998769", "Dianne:9384975"];
+  // const para = document.querySelector('p');
+  // const input = document.querySelector('input');
+  // const btn = document.querySelector('button');
+
+  // btn.addEventListener('click', function() {
+  //   let searchName = input.value.toLowerCase();
+  //   input.value = '';
+  //   input.focus();
+  //   for (let i = 0; i < contacts.length; i++) {
+  //     let splitContact = contacts[i].split(':');
+  //     if (splitContact[0].toLowerCase() === searchName) {
+  //       para.textContent = splitContact[0] + '\'s number is ' + splitContact[1] + '.';
+  //       break;
+  //     } else {
+  //         para.textContent = 'Contact not found.';
+  //       }
+  //   }
+  // }); 
+
+
+
+
+  // // WHILE AND DO...WHILE
+
+  // let cats = ["Bill", "Jeff", "Pete", "Biggles", "Kai"];
+  // let info = "My cats are called ";
+  // let paraTwo = document.querySelector('h5');
+
+  // let i = 0;
+
+  //   while (i < cats.length) {
+  //   if (i === cats.length - 1 ) {
+  //     info += "and " + cats[i] + ".";
+  //   } else {
+  //     info += cats[i] + ", ";
+  //   }
+  //   i++;
+  // }
+  // paraTwo.textContent = info;
+
+  // //WRITTEN AS A DO..WHILE 
+
+   //  let i = 0; 
+   //    do {
+   //      if (i === cats.length - 1) {
+   //      info += "and " + cats[i] + ".";
+   //    } else {
+   //      info += cats[i] + ", ";
+   //    }
+   //    i++;
+   //  } while (i < cats.length);
+  
+
+
+
+   //Launch Countdown
+  
+  </script>
+
+</body>
+</html>

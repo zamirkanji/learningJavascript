@@ -7,7 +7,7 @@ console.log(oneFunc(60, 9));
 //Closure: What does the last line return?
 const addTo = x => y => x + y;
 var addToTen = addTo(10);
-console.log(addToTen(3)); // 13?
+console.log(addToTen(3)); // 13
 
 //Currying: What does the last line return?
 const sum = (a, b) => a + b;

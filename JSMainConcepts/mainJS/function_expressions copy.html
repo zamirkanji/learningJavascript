@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body> 
+  <script>
+    //function declaration
+    function sayHello() {
+      console.log("Hello");
+    }
+    let funcTwo = sayHello;
+    // funcTwo; == shows the code 
+    // funcTwo(); == "Hello"
+
+
+    //function expression
+    let sayHi = function() {
+      console.log("Hi");
+    };
+    let func = sayHi; // can assign entire function expression to a variable 
+
+
+    //callback functions
+    
+    
+    function ask(question, yes, no) {
+      if (confirm(question)) {
+        console.log(yes());
+      } else {
+        console.log(no());
+      }
+    }
+    function showOk() {
+      console.log("You agreed.");
+    }
+    function showCancel() {
+      console.log("You canceled the execution");
+    }
+    //usage: functions showOk, showCancel are passed as arguments for the ask function. Functiond showOk and showCancel become the callback answers for "yes" and "no", respectively. 
+    ask("Do you agree?", showOk, showCancel);
+
+    //another way to write it using a function expression
+    function ask(question, yes, no) {
+      if (confirm(question)) yes() 
+      else no();
+    }
+
+    ask(
+      "Do you agree?",
+      function() { alert("You agreed.");},
+      function() { alert("You canceled the execution.");}
+    );
+
+
+    //function expression vs function declaration 
+    
+    //declaration
+    function sum(a,  b) {
+      return a + b;
+    }
+
+    //expression
+    let sumTwo = function(a, b) {
+      return a + b;
+    };
+
+    // The more subtle difference is when a function is created by the JavaScript engine.
+
+    // A Function Expression is created when the execution reaches it and is usable only from that moment.
+
+    // Once the execution flow passes to the right side of the assignment let sum = function… – here we go, the function is created and can be used (assigned, called, etc. ) from now on.
+
+    // Function Declarations are different.
+
+    // A Function Declaration can be called earlier than it is defined.
+
+    // For example, a global Function Declaration is visible in the whole script, no matter where it is.
+    
+    // sayHi("John"); // Hello, John
+
+    // function sayHi(name) {
+    //   alert(`Hello, ${name}`);
+    // }
+
+
+    // vs. 
+
+    // sayHi("John"); // error!
+
+    // let sayHi = function(name) {  // (*) no magic any more
+    // alert( `Hello, ${name}` );
+    // };
+
+ 
+
+    
+    
+    </script>
+  
+</body>
+</html>

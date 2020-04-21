@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Functions Net Ninja Tutorial</title>
+</head>
+<body>
+  <script>
+    //function expression
+    const speak = function(name = "Luigi", time = "night") {
+      console.log(`Good ${time} ${name}!`);
+    };
+    
+    speak("Zamir", "Morning");
+    speak();
+
+    //return value 
+    const calcArea = function(radius) { 
+      return 3.14 * radius**2;
+    };
+    
+    const area = calcArea(5);
+    console.log("Area is: " + area);
+
+
+
+    //function declaration
+    // function greet() {
+    //   console.log("Hello there");
+    // }
+    // greet();
+    
+    </script>
+  
+</body>
+</html>

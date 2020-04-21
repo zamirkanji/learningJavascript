@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    let cars = ["Honda", "Acura", "Meercedes", "Audi"];
+    let people = new Array("Zamir", "Sam", "Braedon");
+
+
+    let name = cars[1]; //console.log(name);
+
+
+    cars[0] = "Lambo"; //changing an array element 
+
+    console.log(cars); //accesses the full array
+
+    let person = ["Zamir", "Kanji", 25];
+
+    let personTwo = {firstName: "Zamir", lastName: "Kanji", age: 25};
+
+    console.log(personTwo.firstName);
+
+    // myArray[0] = myFunction;
+
+
+    let x = cars.length;
+    let y = cars.sort();
+
+    let fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fruits.length; //length of array starting at index 0
+
+    let first = fruits[0]; //first array element 
+
+    let last = fruits[fruits.length - 1]; //last element 
+
+    let fLen = fruits.length;
+
+    function runArray() {
+      for(i = 0; i < fLen; i++) {
+        console.log(fruits[i]);
+      }
+    }
+
+
+    fruits.push("Lemon"); //adds a new element (Lemon)
+
+    // or 
+
+    fruits[fruits.length] = "Grape";
+
+
+    
+    
+    //ASSOCIATIVE ARRAYS
+    let clothes = [];
+    clothes[0] = "Pants";
+    clothes[1] = "Jacket";
+    clothes[2] = "Shirt";
+    let z = clothes.length; // returns 3
+    let u = clothes[0]; // returns Pants
+    
+    
+    // JavaScript does not support associative arrays.
+    // You should use objects when you want the element names to be strings (text).
+    // You should use arrays when you want the element names to be numbers.
+
+    let points = new Array(); // bad 
+    let pointsG = []; // good 
+
+    // How to know if a letiable is an array 
+    typeof fruits;
+    fruits instanceof Array;
+
+
+
+
+
+
+    
+
+
+    //ARRAY METHODS 
+
+    fruits.toString(); // string of (Comma seperated) array values // Banana,Orange,Apple,Mango
+
+    fruits.join(" * "); //behaves like toString but you can specify the operator // Banana * Orange * Apple etc.
+
+
+
+
+
+    //POPPING & PUSHING - (Popping items OUT of an array, or pushing items INTO an array)
+
+    fruits.pop(); //Removes the last element from fruits 
+
+    //The pop() method returns the value that was "popped out"
+
+    let m = fruits.pop(); // The value of m is "Lemon";
+
+    fruits.push(); // adds a new element to an array (at the end)
+
+    fruits.push("Kiwi");
+
+    //The push() method returns the new array length 
+
+    let p = fruits.push(); // The value of p is 5
+
+
+
+
+
+
+    // SHIFTING ELEMENTS - shift() method removes the first array element and "shifts" all other elements to a lower index 
+
+    fruits.shift(); // Removes the first element "Banana" from fruits 
+
+    // The shift() method returns the string that was "shifted out"
+
+    // let s = fruits.shift(); // the value of s is "Banana"
+
+    fruits.unshift("Passionfruit"); // adds a new element to an array (at the beginning), and "unshifts" older elements (Passionfruit, Orange, etc...)
+
+    // unshift() returns the array length when assigned to a letialble 
+
+
+
+
+
+    //CHANGING ELEMENTS 
+
+    fruits[0] = "Tangerine"; // changes the first element of fruits to Tangerine 
+
+    delete fruits[0]; // changes the first element in fruits to undefined (using delete mat leave undefined holes in the array - use pop or shift instead)
+
+
+
+
+
+    //SPLICING AN ARRAY - The splice() method can be used to add new items to an array 
+    let food = ["Pizza", "Soup", "Burger", "Chicken"];
+    food.splice(2, 0, "Pad Thai", "Teriyaki");
+
+    // Outputs piiza, soup, pad thai, teriyaki, burger 
+
+    // First parameter defines the position where new elements should be added (spliced in)
+    // Second parameter defined how many elements should be removed 
+    // The rest of the parameters ("Pad Thai", "Teriyaki") define the new elements to be added 
+
+    // The splice() method returns an array with the deleted items 
+
+    food.splice(0, 1); // removes the first elements of fruits 
+
+
+
+
+    //MERGING (CONCATENATING) ARRAYS - The concat() method creates a new array by merging (Concatenating) existing arrays 
+
+    let myGirls = ["Nicole", "Natasha"];
+    let myBoys = ["Sam", "Zamir"];
+    let myChildren = myGirls.concat(myBoys); // joins myGirls and myBoys
+
+    // Merging more than two arrays 
+    let arr1 = ["Cecilie", "Lone"];
+    let arr2 = ["Emil", "Tobias", "Linus"];
+    let arr3 = ["Robin", "Morgan"];
+    let myChildrenTwo = arr1.concat(arr2, arr3);
+
+    // The concat() method can also take values as arguments
+    let arrEx = ["Jordan", "Austin"];
+    let arrValue = arrEx.concat(["Emil", "Tobias"]);
+
+
+
+
+
+    //SLICING AN ARRAY - The slice() method slices out a piece of an array into a new array - slice(!) cuts from index position 1 AND on. 
+
+    food.slice();
+
+    // The slice method can take two arguments slice(1, 3); - the method then selects elements from the start argument, and up to (but not including) the end argument. 
+
+
+
+
+    //AUTOMATIC toString(); - JavaScript automatically converts an array to a comma seperated string when a primitive value is expected 
+
+    //These produce the same result: 
+
+    fruits.toString();
+
+    fruits;
+
+    // All JS objects have a toString() method
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+ 
+    
+    </script>
+  
+</body>
+</html>
