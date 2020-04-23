@@ -27,11 +27,20 @@ const arrayEx = [
 
 ];
 
-//Create an array using forEach that has all the usernames with a "!" to each of the usernames
+console.log(arrayEx[0].username); //only "john"
 
+//Create an array using forEach that has all the usernames with a "!" to each of the usernames
+const exclamation = [];
+const arrayExclamation = arrayEx[0].forEach(username => {
+  exclamation.push(username + "!");
+})
+console.log("foreach", exclamation);
 
 //Create an array using map that has all the usernames with a "? to each of the usernames
-
+const arrayMap = arrayEx.map((username) => {
+  return username + "?";
+})
+console.log("map", arrayMap);
 
 //Filter the array to only include users who are on team: red
 
