@@ -23,15 +23,15 @@ function condition() {
 
 let answer2 = condition();
 
-// my example 
 
+// my example 
 const coinFlip = () => {
-let chooseCoin = prompt("Choose Heads or Tails?");
-let coin = 
-  (chooseCoin == "heads") ? "You win 10 million dollars!" : 
-  (chooseCoin == "tails") ? "You win nothing, tails sucks":
-    "That's not a side of the coin!";
-    
+  let chooseCoin = prompt("Choose Heads or Tails?");
+  let coin =
+    (chooseCoin == "heads") ? "You win 10 million dollars!" :
+      (chooseCoin == "tails") ? "You win nothing, tails sucks" :
+        "That's not a side of the coin!";
+
   console.log(coin);
 }
 console.log(coinFlip());
