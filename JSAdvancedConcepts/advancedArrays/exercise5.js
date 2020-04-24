@@ -24,20 +24,23 @@ const arrayEx = [
     score: 1,
     items: ["book", "pen"]
   },
-
+  //adding something 
+  {
+    me: ["Zamir", "Kanji"]
+  },
 ];
 
-// let userN = arrayEx.forEach()
-console.log(arrayEx[0].username); //only "john"
+console.log(arrayEx[4].me[1]); // "Kanji" - CAN index objects INSIDE an array just like you can index arrays in general
 
 //Create an array using forEach that has all the usernames with a "!" to each of the usernames
 const exclamation = [];
-const arrayExclamation = arrayEx.forEach(username => exclamation.push(username + "!"));
-
-// const pushUsername = () => {
-//   let userN = arrayEx[0].username;
-//   exclamation.push(userN + "!");
-// }
+const arrayExclamation = arrayEx.forEach((usernN) => {
+  exclamation.push(usernN.username + "!");
+})
+// forEach take a function - function with a parameter/arg of "userN"
+// "userN" is just a parameter/arg for EACH INDIVIDUAL object inside the array (length 4)
+// for each individual object (userN), push "username" + "!" to exclamation array
+console.log(arrayExclamation);
 console.log("foreach", exclamation);
 
 //Create an array using map that has all the usernames with a "? to each of the usernames

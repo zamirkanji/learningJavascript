@@ -15,6 +15,7 @@ const newArray = array.forEach(num => {
 });
 console.log("forEach", double);
 
+
 //MAP - same as forEach but always need to "return"
 //Map loop over each array, applying the operation on each element, and returns each result - gets added to the array - cant do that with forEach()
 const mapArray = array.map((num) => {
