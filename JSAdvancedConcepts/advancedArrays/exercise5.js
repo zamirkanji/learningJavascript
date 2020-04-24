@@ -27,11 +27,12 @@ const arrayEx = [
 
 ];
 
+// let userN = arrayEx.forEach()
 console.log(arrayEx[0].username); //only "john"
 
 //Create an array using forEach that has all the usernames with a "!" to each of the usernames
 const exclamation = [];
-const arrayExclamation = arrayEx.forEach(arrayEx => exclamation.push(arrayEx[0].username + "!"));
+const arrayExclamation = arrayEx.forEach(username => exclamation.push(username + "!"));
 
 // const pushUsername = () => {
 //   let userN = arrayEx[0].username;
@@ -55,7 +56,7 @@ console.log("map", arrayMap);
 const arrayNum = [1, 2, 4, 5, 8, 9];
 const newArrayEx = arrayNum.map((num, i) => {
   console.log(num, i);
-  alert(num);
+  console.log(num);
   return num * 2;
 })
 

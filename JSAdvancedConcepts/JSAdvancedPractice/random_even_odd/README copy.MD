@@ -1,0 +1,1 @@
+output random number between two numbers entered in input. depending on the number, even or odd numbers will be outputed up to the random number
