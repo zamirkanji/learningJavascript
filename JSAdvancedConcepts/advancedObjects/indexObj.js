@@ -29,11 +29,11 @@ let array = [
     { name: "Zammy" },
     {
         [60 + 9]: "hehe",
-        fnc: (a, b) => a + b
+        fncEx: (a, b) => a + b
     }
 ]
 
 console.log(array[0].what); //is this
 console.log(array[1].name); //Zammy
 console.log(array[2]); //3rd object as a whole
-console.log(array[2].fnc(60, 9)); //69
+console.log(array[2].fncEx(60, 9)); //69
