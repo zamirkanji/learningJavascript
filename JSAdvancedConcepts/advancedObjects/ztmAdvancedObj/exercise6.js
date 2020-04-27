@@ -14,19 +14,21 @@ object1.a = 4;
 //#3 create two classes: an Animal class and a Mamal class. 
 // create a cow that accepts a name, type and color and has a sound method that moo's her name, type and color. 
 class Animal {
-    constructor (name, type, color) {
+    constructor(name, type, color) {
         this.name = name;
         this.type = type;
         this.color = color;
     }
-        sound = function() {
-            console.log(`Mooooo, ${this.name}`);
-        }
-        iAmCow = () => console.log(`My name is ${this.name} and my color is ${this.color}`);
+    sound = function () {
+        console.log(`Mooooo, ${this.name}`);
+    }
+    iAmCow = () => console.log(`My name is ${this.name} and my color is ${this.color}`);
 }
 
 class Mamal extends Animal {
-    super(name, type, color) {
-        console.log(this);
+    constructor(name, type, color) {
+        super(name, type, color) {
+            console.log(this);
+        }
     }
 }
