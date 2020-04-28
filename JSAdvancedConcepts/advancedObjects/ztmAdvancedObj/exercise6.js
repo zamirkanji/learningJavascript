@@ -27,8 +27,7 @@ class Animal {
 
 class Mamal extends Animal {
     constructor(name, type, color) {
-        super(name, type, color) {
-            console.log(this);
-        }
+        super(name, type, color)
+        console.log(this);
     }
 }

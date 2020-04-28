@@ -29,7 +29,7 @@ console.log(this.console.log("yo!"));
 
 //example 1
 const a = () => console.log(this);
-a(); //logs the "Window" obj - because "this" is inside of the window obj
+a(); //logs the "Window" obj - because a() is inside of the window obj
 
 //example 2 - (why can't i use arrow function)???
 //"this" is the obj (obj4)
