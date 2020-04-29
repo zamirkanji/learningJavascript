@@ -18,7 +18,7 @@ const renderMovies = (filter = "") => {
     movieList.innerHTML = "";
 
     const filteredMovies = !filter
-        ? movies
+        ? movies // if filter is NOT blank, show all movies in movieList otherwise show filtered movies 
         : movies.filter(movie => {
         movie.info.movieTitle.includes(filter)
 
@@ -68,7 +68,7 @@ const addMovieHandler = () => {
 
 const searchMovieHandler = () => {
     const filterTerm = document.getElementById("filter-title").value;
-    renderMovies(filterTerm);
+    renderMovies(filterTerm); //filterTerm is the argument passed into rendermovies function with the parameter "filters"
 }
 
 
