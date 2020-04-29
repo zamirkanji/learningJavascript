@@ -20,9 +20,10 @@ html, body {
 .body-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   background-color: black;
+  height: 100%;
 }
 
 label {
@@ -105,4 +106,8 @@ button:active {
   color: #ff0062;
   font-weight: bold;
   font-size: 1.5rem;
+}
+
+li {
+  color: black;
 }
