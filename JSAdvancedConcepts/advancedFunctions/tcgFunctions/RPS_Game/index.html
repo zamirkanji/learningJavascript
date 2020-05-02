@@ -5,15 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="/JSAdvancedConcepts/advancedFunctions/tcgFunctions/RPS_Game/style.css">
 </head>
 
 <body>
-    <button id="start-game">Start Game!</button>
+    <div class="body-container">
+        <div class="start-game">
+            <button id="start-game">Start Game!</button>
+            <label for="playerChoice"></label>
+            <input id="playerChoice" type="text" name="playerChoice" placeholder="Pick your weapon">
+        </div>
+
+        <div class="results">
+            <p id="player-result"></p>
+            <p id="computer-result"></p>
+
+            <h3 id="winner"></h3>
+        </div>
+
+        <!-- <script src="/JSAdvancedConcepts/advancedFunctions/tcgFunctions/func.js"></script> -->
 
 
-
-    <!-- <script src="/JSAdvancedConcepts/advancedFunctions/tcgFunctions/func.js"></script> -->
-    <script src="/JSAdvancedConcepts/advancedFunctions/tcgFunctions/rps.js"></script>
+    </div>
+    <script src="/JSAdvancedConcepts/advancedFunctions/tcgFunctions/RPS_Game/rps.js"></script>
 </body>
 
 </html>

@@ -14,7 +14,7 @@ const checkAge = () => {
                     console.log("thats not even a number!");
 }
 
-const goesToBar = (boolean) =>
+const goesToBar = (boolean) => //no curly braces for one expression
     (boolean === true) ? checkAge() :
         (boolean == false) ? console.log("you're going home, buddy...") :
             console.log("you either went, or you didn't");

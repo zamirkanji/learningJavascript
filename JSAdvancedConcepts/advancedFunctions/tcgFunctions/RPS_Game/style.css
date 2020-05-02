@@ -1,0 +1,53 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.body-container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(163, 161, 161, .4);
+}
+
+.start-game {
+    display: flex;
+    flex-direction: column;
+}
+
+#start-game {
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    opacity: .8;
+    border: 1px solid rgba(163, 161, 161, .4);
+    padding: 5px 10px;
+    transition: all .4s ease-in;
+}
+
+#start-game:hover {
+    opacity: .4;
+}
+
+#playerChoice {
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: rgba(163, 161, 161, .4);
+    opacity: .8;
+    border: 1px solid rgba(163, 161, 161, .4);
+    padding: 5px 10px;
+    transition: all .4s ease-in;
+}
+
+#playerChoice::placeholder {
+    color: black;
+    font-weight: 200;
+    text-align: center;
+}
