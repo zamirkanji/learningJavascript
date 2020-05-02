@@ -3,6 +3,8 @@ const computerResult = document.getElementById("computer-result");
 const winner = document.getElementById("winner");
 const playerInput = document.getElementById("playerChoice").value;
 
+const choiceBtns = document.querySelector(".button-options");
+
 
 const startGameBtn = document.getElementById("start-game");
 
@@ -63,7 +65,15 @@ const determineWinner = (cChoice, pChoice) => {
             ? PLAYER_WINS : COMPUTER_WINS;
 }
 
+// const showBtnsClass = () => {
+//     choiceBtns.classList.remove("vis-Hidden");
+//     choiceBtns.classList.add("showBtns");
+// }
+
+// startGameBtn.addEventListener("click", showBtnsClass);
+
 startGameBtn.addEventListener("click", () => {
+
     if (gameIsRunning) {
         return; // doesn't start new games
     }

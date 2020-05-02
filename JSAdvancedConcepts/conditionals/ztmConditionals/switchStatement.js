@@ -22,7 +22,7 @@ function moveCommand(direction) {
 
 function matchItems(shoppingItem) {
   let itemMatch;
-  switch (shoppingItem) {
+  switch (shoppingItem) { //if the argument shopping item is one of these...
     case "apple":
       itemMatch = "You found an apple!";
       break; // stops at break and returns variable itemMatch "You found an apple!"
