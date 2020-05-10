@@ -102,6 +102,9 @@ console.log(12, sumUp2(1, 8, 4, 29)); //42
 
 
 
+
+
+
 //example - function inside function/BIND()
 const funcInside = (resultHandler, operation, ...numbers) => {
     const validateNumber = (number) => {
@@ -120,7 +123,7 @@ const funcInside = (resultHandler, operation, ...numbers) => {
 }
 
 
-//callback func
+//callback func - callback function is called for you by something else - cant control when its called - you dont know when the click occures (addEventListener("click"))
 const showResult = (result, messageText) => {
     console.log(messageText + ` ${result}`)
 };
@@ -129,10 +132,34 @@ const showResult = (result, messageText) => {
 //outputs
 console.log(funcInside(showResult.bind(this, "The result after adding all numbers is"), "ADD", 3, 9, -7, 0, "hehe")); // 5 - no error
 //showResult is "resultHandler" argument - as a callback function
+// "ADD" is the operation argument in funcInside
+// then whatever numbers are left get added to the array rest parameter (operator)
 
 // console.log(subtractUp(showResult, 19, 34, 984)); // still says "adding all numbers" (instead of subtracting)
 
 console.log(funcInside(showResult.bind(this, "The result after subtracting all numbers is"), "SUBTRACT", 19, 34, 984)); // still says "adding all numbers" (instead of subtracting)
 
 
-//callback function is called for you by something else - cant control when its called - you dont know when the click occures (addEventListener("click"))
+
+
+
+//BIND() - ANOTHER EXAMPLE
+let c1 = {
+    x: 5,
+    y: 10
+};
+
+let c2 = {
+    x: 75,
+    y: 235
+};
+
+const printCoordinates = () => {
+    console.log(this.x + ", " + this.y); //this refers to each object (c1, or c2) passed into this function (printC) with BIND
+}
+
+let c1_func = printCoordinates.bind(c1); //bind c1 to printCoordinates
+c1_func();
+// console.log(c1_func);
+let c2_func = printCoordinates.bind(c2);
+c2_func();
