@@ -8,6 +8,7 @@ const first = () => {
 
 const newFunc = first(); //assign variable to function rendering it a function... must be called like a function
 newFunc();
+first();
 console.log(newFunc);
 
 //CLOSURES - a function runs, the function executes ONCE, its never going to execute again, but its going to remember that there are references to those variables...
