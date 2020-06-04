@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Movie List with Objects</title>
+</head>
+
+<body class="body-container">
+    <div class="main-container">
+        <div id="form-container">
+            <form action="/JSAdvancedConcepts/advancedObjects/myPractice_Obj/movieObjList/list.php" action="POST">
+                <label for="movieName" class="input-label">Movie Name:</label>
+                <input type="text" class="input-label" id="movieName" placeholder="First Name" name="movieName"
+                    value="First Name" required="required">
+                <label for="lname" class="input-label">Last Name:</label>
+                <input type="text" class="input-label" id="lname" placeholder="First Name" name="fname"
+                    value="First Name" required="required">
+                <label for="fname" class="input-label">Age:</label>
+                <input type="number" class="input-label" id="fname" placeholder="First Name" name="fname"
+                    value="First Name" required="required">
+                <label for="fname" class="input-label">Email:</label>
+                <input type="number" class="input-label" id="fname" placeholder="First Name" name="fname"
+                    value="First Name" required="required">
+
+                <input type="checkbox" id="genderMale" name="Male" value="Male">
+                <label for="genderMale">Male</label><br>
+                <input type="checkbox" id="genderFemale" name="Female" value="Female">
+                <label for="genderFemale">Female</label><br>
+
+                <input type="submit" value="Submit">
+            </form>
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="list.js"></script>
+    <script src="list.JSON"></script>
+
+</body>
+
+</html>
