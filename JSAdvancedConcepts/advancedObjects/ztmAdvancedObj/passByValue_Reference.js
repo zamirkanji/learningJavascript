@@ -35,7 +35,7 @@ let obj = {
 }
 
 let objClone = Object.assign({}, obj);
-let objClone2 = { ...obj }; //***
+let objClone2 = { ...obj }; //*** using spread operator
 let superClone = JSON.parse(JSON.stringify(obj)); //turn to string then back to obj
 // obj.c = 5;
 // console.log(obj);

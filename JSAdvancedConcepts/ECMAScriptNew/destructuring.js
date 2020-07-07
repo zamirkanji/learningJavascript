@@ -60,4 +60,12 @@ const newFunction2 = () => {
 };
 console.log(newFunction2());
 
+//Destructuring Arrays 
+
+const arrayDestructure = [1, 2, 5, 7];
+
+let [zero, one, two] = arrayDestructure;
+
+console.log(two); //5
+
 
