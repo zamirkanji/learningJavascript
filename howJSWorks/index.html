@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>How JS Works</h1>
+    </header>
+
+    <div class="body-container">
+        <ul>
+            <li>Memory Heap
+                <ul>
+                    <li>Memory Leak</li>
+                </ul>
+            </li>
+            <li>Call Stack
+                <ul>
+                    <li>First in, last out</li>
+                </ul>
+            </li>
+            <li>Single-Threaded that can be non-blocking
+                <ul>
+                    <li>Only one call-stack, can do one thing at a time </li>
+                </ul>
+            </li>
+            <li>Synchronous Programming
+                <ul>
+                    <li>Line one gets executed, then two, then three</li>
+                    <li>Each line can't start until the previous one finishes</li>
+                </ul>
+            </li>
+            <li>Asynchronous Programming
+                <ul>
+                    <li>Callback functions get run in the background so other functions can run</li>
+                </ul>
+            </li>
+            <li>
+                Stack Overflow (Overflowing the stack from recursion)
+            </li>
+        </ul>
+
+        <img src="/howJSWorks/src/1_iHhUyO4DliDwa6x_cO5E3A.gif" alt="JS Run Time Envirommennt" width="600px"
+            height="400px">
+    </div>
+
+    <script src="index.js"></script>
+    <script src="asynchronous.js"></script>
+</body>
+
+</html>

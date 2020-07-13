@@ -85,17 +85,17 @@ const amazonBasket = {
     floss: 100
 }
 
-
+// for (item in amazonBasket) {
+//     console.log(item);
+// }
 
 function checkBasket(basket, lookingFor) {
-    // console.log(Object.entries(basket));
-
-    for (let item in basket) {
-        console.log(item);
-        // item === lookingFor ? true : console.log("Item not in basket!");
+    for (item in basket) {
+        if (item === lookingFor) {
+            return `${lookingFor} is in your basket!`
+        }
     }
-
-    // Object.entries(basket) === lookingFor ? true : false;
+    return `${lookingFor} is NOT in your basket.`
 }
 
 checkBasket(amazonBasket, "glasses");
