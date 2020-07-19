@@ -5,6 +5,8 @@
 
 // console.log(add(4, 5));
 
+export const add = (a, b) => a + b;
+
 
 
 export default class User {

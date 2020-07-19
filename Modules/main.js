@@ -4,16 +4,21 @@
 //ES6 + Webpack2
 
 //JS 1
-// export const add = (a, b) => a + b;
+
 //OR
 // export default function add() {
 //     return a + b;
 // }
 
 // //JS 2
-// import { add } from './add';
+import { add } from './user.js';
+
+console.log(add(4, 5));
 // //OR
 // import add from './add';
+
+import { functionModule } from "./3.js";
+functionModule();
 
 
 import User, { printName, printAge as printUserAge } from "./user.js"
