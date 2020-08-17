@@ -1,24 +1,34 @@
 html,
 body {
-	height: 100vh;
-	width: 100vw;
-	margin: 0 auto;
-	padding: 0;
+  height: 100vh;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .main-container {
-	height: 100%;
-	width: 100%;
-	background-color: smoke;
+  height: 100%;
+  width: 100%;
+  background-color: smoke;
 }
 
 #output {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	color: black;
-	font-size: 16px;
-	font-weight: 800;
-	/* 	letter-spacing: 0.5em; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-size: 16px;
+  font-weight: 800;
+  /* 	letter-spacing: 0.5em; */
+}
+
+#output2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-size: 16px;
+  font-weight: 800;
 }
