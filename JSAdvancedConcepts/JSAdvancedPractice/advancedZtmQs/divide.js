@@ -22,6 +22,8 @@ export const divideArray = (arr) => {
     // }
   }
 
+  //test feature
+
   console.log(tempArr, "temp");
   console.log(sorted, "sorted");
   output.textContent = sorted;
