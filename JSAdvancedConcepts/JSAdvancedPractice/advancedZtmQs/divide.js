@@ -23,6 +23,7 @@ export const divideArray = (arr) => {
   }
 
   //test feature
+  //BIG FEATURE test
 
   console.log(tempArr, "temp");
   console.log(sorted, "sorted");
